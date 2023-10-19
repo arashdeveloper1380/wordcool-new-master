@@ -1,0 +1,23 @@
+{
+    "name": "wordcool/arash-wordcool",
+    "description": "wordcool mvc wordpress framework",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\": "core/"
+        },
+        "files": [
+            "core/Router/helpers/RouteHelpers.php",
+            "core/Helpers/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "arashdeveloper1380",
+            "email": "arash.developer1380@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^6.3"
+    }
+}
