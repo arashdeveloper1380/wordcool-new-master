@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-class Controller {
+use Core\Request\Request;
 
-    //
+class Controller {
+    
 
 }

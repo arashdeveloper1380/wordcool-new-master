@@ -8,8 +8,9 @@ use Core\Request\Request;
 class HomeController extends Controller{
 
     public function index(){
-        $req = new Request();
-        dd($req->all());
+        // $req = (new Request())->all();
+        dd(request()->all());
+        
     }
 
 }

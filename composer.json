@@ -8,6 +8,8 @@
         },
         "files": [
             "core/Router/Helpers/RouteHelpers.php",
+            "core/Request/Helpers/RequestHelpers.php",
+            "core/JsonQueryBuilder/Helpers/JsonQueryBuilderHelpers.php",
             "core/Helpers/helpers.php"
         ]
     },
@@ -18,6 +20,7 @@
         }
     ],
     "require": {
-        "symfony/var-dumper": "^6.3"
+        "symfony/var-dumper": "^6.3",
+        "illuminate/view": "^10.29"
     }
 }

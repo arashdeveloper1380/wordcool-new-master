@@ -1,7 +1,5 @@
 <?php
 
-use Core\Request\Request;
-
 class Boot {
 
     public function __construct(){
