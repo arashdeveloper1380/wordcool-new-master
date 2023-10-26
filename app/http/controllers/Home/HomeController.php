@@ -8,10 +8,8 @@ use Core\Request\Request;
 class HomeController extends Controller{
 
     public function index(){
-        $arr = ['arash', 'hasan'];
-
-        dd($arr);
-
+        $req = new Request();
+        dd($req->all());
     }
 
 }

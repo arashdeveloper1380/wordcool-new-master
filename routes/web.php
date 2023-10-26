@@ -13,16 +13,16 @@ use Core\Router\Route;
     
 // });
 
-// rget('/(\w+)/test/(\w+)\?id=.*',function(){
-//     echo "home";
+// rget('/(\w+)/test/(\w+)\?age=.*',function($name, $lname){
+//     echo "name is : {$name} and lname is : {$lname} and Age is : {$_GET['age']}";
 // });
 
 // // Route::get('/blog/(\w+)', function($id){
 // //     echo "home $id";
 // // });
 
-Route::get('/','Home/HomeController@index');
-// // Route::get('/','HomeController@index');
+// Route::get('/(\w+)/test/(\w+)\?age=.*','Home/HomeController@index');
+Route::get('/test\?id=.*','Home/HomeController@index');
 
 
 Route::dispatch();

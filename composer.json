@@ -7,7 +7,7 @@
             "Core\\": "core/"
         },
         "files": [
-            "core/Router/helpers/RouteHelpers.php",
+            "core/Router/Helpers/RouteHelpers.php",
             "core/Helpers/helpers.php"
         ]
     },

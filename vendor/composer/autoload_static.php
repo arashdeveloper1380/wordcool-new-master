@@ -10,7 +10,7 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        'acb585676d283776b25efcde3d194ecc' => __DIR__ . '/../..' . '/core/Router/helpers/RouteHelpers.php',
+        'bb0b77f7baa5b3d9461191652a13426b' => __DIR__ . '/../..' . '/core/Router/Helpers/RouteHelpers.php',
         'e264fcc509a48605974ba9848a277201' => __DIR__ . '/../..' . '/core/Helpers/helpers.php',
     );
 
