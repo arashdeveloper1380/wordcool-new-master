@@ -10,6 +10,7 @@
             "core/Router/Helpers/RouteHelpers.php",
             "core/Request/Helpers/RequestHelpers.php",
             "core/JsonQueryBuilder/Helpers/JsonQueryBuilderHelpers.php",
+            "core/View/Helpers/ViewHelpers.php",
             "core/Helpers/helpers.php"
         ]
     },

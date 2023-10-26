@@ -22,7 +22,7 @@ use Core\Router\Route;
 // // });
 
 // Route::get('/(\w+)/test/(\w+)\?age=.*','Home/HomeController@index');
-Route::get('/test\?id=.*','Home/HomeController@index');
+Route::get('/test','Home/HomeController@index');
 
 
 Route::dispatch();

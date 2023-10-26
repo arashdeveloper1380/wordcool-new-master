@@ -12,7 +12,10 @@ class HomeController extends Controller{
         // $req = (new Request())->all();
         // dd(request()->all());
         $name = "arash";
-        return View::blade('index', compact('name'));
+
+        // blade('index', compact('name'));
+
+        render('index', compact('name'));
         
     }
 

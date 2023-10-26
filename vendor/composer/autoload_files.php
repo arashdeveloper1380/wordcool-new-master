@@ -17,5 +17,6 @@ return array(
     'bb0b77f7baa5b3d9461191652a13426b' => $baseDir . '/core/Router/Helpers/RouteHelpers.php',
     '4bceefc4bc6ec8c49742e0d3cfb741bd' => $baseDir . '/core/Request/Helpers/RequestHelpers.php',
     '3697e6e7c26f427850d706b624d56b7f' => $baseDir . '/core/JsonQueryBuilder/Helpers/JsonQueryBuilderHelpers.php',
+    'b0332d6b146bd600288acf97ca226fa1' => $baseDir . '/core/View/Helpers/ViewHelpers.php',
     'e264fcc509a48605974ba9848a277201' => $baseDir . '/core/Helpers/helpers.php',
 );

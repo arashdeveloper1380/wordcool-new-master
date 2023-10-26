@@ -2,6 +2,7 @@
 
 namespace Core\View;
 
+use Exception;
 use Illuminate\View\Factory;
 use Illuminate\View\FileViewFinder;
 use Illuminate\View\Engines\EngineResolver;
@@ -12,6 +13,21 @@ use Illuminate\Filesystem\Filesystem;
 class View {
 
     private static $viewFactory;
+
+    public static function render($view, $data = []){
+
+        extract($data);
+
+        $path = str_replace('.', '/', $view);
+        
+        $path = BASE_PATH ."/resources/views/" . $path . ".php";
+
+        if(!file_exists($path)){
+            throw new \Exception("View {$path} Not Found");
+        }
+
+        require_once $path;
+    }
 
     public static function blade($view, $data = [])
     {

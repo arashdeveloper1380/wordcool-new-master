@@ -18,6 +18,7 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         'bb0b77f7baa5b3d9461191652a13426b' => __DIR__ . '/../..' . '/core/Router/Helpers/RouteHelpers.php',
         '4bceefc4bc6ec8c49742e0d3cfb741bd' => __DIR__ . '/../..' . '/core/Request/Helpers/RequestHelpers.php',
         '3697e6e7c26f427850d706b624d56b7f' => __DIR__ . '/../..' . '/core/JsonQueryBuilder/Helpers/JsonQueryBuilderHelpers.php',
+        'b0332d6b146bd600288acf97ca226fa1' => __DIR__ . '/../..' . '/core/View/Helpers/ViewHelpers.php',
         'e264fcc509a48605974ba9848a277201' => __DIR__ . '/../..' . '/core/Helpers/helpers.php',
     );
 
@@ -114,9 +115,9 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
             1 => __DIR__ . '/..' . '/illuminate/conditionable',
-            2 => __DIR__ . '/..' . '/illuminate/collections',
+            2 => __DIR__ . '/..' . '/illuminate/macroable',
             3 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Pipeline\\' => 
