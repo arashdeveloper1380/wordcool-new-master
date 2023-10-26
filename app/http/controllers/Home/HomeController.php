@@ -13,9 +13,9 @@ class HomeController extends Controller{
         // dd(request()->all());
         $name = "arash";
 
-        // blade('index', compact('name'));
+        blade('index', compact('name'));
 
-        render('index', compact('name'));
+        // render('index', compact('name'));
         
     }
 

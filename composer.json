@@ -22,6 +22,8 @@
     ],
     "require": {
         "symfony/var-dumper": "^6.3",
-        "illuminate/view": "^10.29"
+        "illuminate/view": "^10.29",
+        "illuminate/database": "^10.29",
+        "jgrossi/corcel": "^7.0"
     }
 }
