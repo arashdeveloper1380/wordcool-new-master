@@ -17,8 +17,10 @@ class HomeController extends Controller{
 
         // render('index', compact('name'));
 
-        // var_dump(Post::all());
-        // var_dump(DB::table('wp_users')->first());
+        // dd(Post::all());
+        // dd(DB::table('wp_users')->first());
+
+        dd(db()->table('wp_users')->first());
     }
 
 }
