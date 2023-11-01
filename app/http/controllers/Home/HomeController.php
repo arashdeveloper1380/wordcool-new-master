@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use Corcel\Model\Post;
 use Illuminate\Database\Capsule\Manager as DB;
 
 class HomeController extends Controller{
@@ -11,14 +12,13 @@ class HomeController extends Controller{
         // $req = (new Request())->all();
         // dd(request()->all());
         $name = "arash";
-        $dbhost = $_ENV['DB_CONNECTION'];
 
-        blade('index', compact('name','dbhost'));
+        blade('index', compact('name'));
 
         // render('index', compact('name'));
 
-        $users = DB::table('wp_posts')->get();
-        
+        // var_dump(Post::all());
+        // var_dump(DB::table('wp_users')->first());
     }
 
 }

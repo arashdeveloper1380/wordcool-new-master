@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php echo e($name); ?> <?php echo e($dbhost); ?>
+    <?php echo e($name); ?>
 
 </body>
 </html><?php /**PATH C:\xampp\htdocs\wordcool\wp-content\plugins\wordcool-new-master\resources\views/index.blade.php ENDPATH**/ ?>
