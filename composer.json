@@ -25,6 +25,7 @@
         "illuminate/view": "^10.29",
         "illuminate/database": "^10.29",
         "jgrossi/corcel": "^7.0",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "symfony/console": "^6.3"
     }
 }
