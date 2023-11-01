@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
-use Core\Request\Request;
-use Core\View\View;
+use Illuminate\Database\Capsule\Manager as DB;
 
 class HomeController extends Controller{
 
@@ -12,10 +11,13 @@ class HomeController extends Controller{
         // $req = (new Request())->all();
         // dd(request()->all());
         $name = "arash";
+        $dbhost = $_ENV['DB_CONNECTION'];
 
-        blade('index', compact('name'));
+        blade('index', compact('name','dbhost'));
 
         // render('index', compact('name'));
+
+        $users = DB::table('wp_posts')->get();
         
     }
 

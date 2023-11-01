@@ -13,6 +13,7 @@ return array(
     'a1105708a18b76903365ca1c4aa61b02' => $vendorDir . '/symfony/translation/Resources/functions.php',
     '72579e7bd17821bb1321b87411366eae' => $vendorDir . '/illuminate/support/helpers.php',
     'ef65a1626449d89d0811cf9befce46f0' => $vendorDir . '/illuminate/events/functions.php',
+    '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
     '667aeda72477189d0494fecd327c3641' => $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
     'bb0b77f7baa5b3d9461191652a13426b' => $baseDir . '/core/Router/Helpers/RouteHelpers.php',
     '4bceefc4bc6ec8c49742e0d3cfb741bd' => $baseDir . '/core/Request/Helpers/RequestHelpers.php',
