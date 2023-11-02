@@ -3,5 +3,9 @@
 // Register Commands
 
 use App\Command\HelloCommand;
+use App\Command\MakeControllerCommand;
 
-$application->add(new HelloCommand());
+$application->addCommands([
+    new HelloCommand(),
+    new MakeControllerCommand()
+]);

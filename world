@@ -5,8 +5,12 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 
+
 $application = new Application();
 
 require_once __DIR__ . '/app/command/register.php';
+
+
+$application->setDefaultCommand('list');
 
 $application->run();
