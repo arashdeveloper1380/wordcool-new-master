@@ -28,11 +28,6 @@ class MakeCommandCommand extends Command
         $fileContent = file_get_contents($stubPath);
 
         $fileContent = str_replace('{{Command}}', $commandName, $fileContent);
-
-        // if(!empty($path)){
-        //     $fileContent = str_replace('{{dir}}', $path, $fileContent);
-        // }
-        
         
         file_put_contents($filePath, $fileContent);
 
