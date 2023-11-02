@@ -1,0 +1,79 @@
+#!/usr/bin/env php
+<?php
+
+require_once 'vendor/autoload.php';
+
+class REPL {
+    private $history = [];
+    private $variables = [];
+
+    public function start() {
+        $this->welcomeMessage();
+
+        while (true) {
+            $input = readline('>>> ');
+
+            if ($input === 'exit') {
+                break;
+            }
+
+            $this->evaluate($input);
+        }
+
+        $this->goodbyeMessage();
+    }
+
+    private function welcomeMessage() {
+        echo "Welcome to the PHP REPL!\n";
+        echo "Type 'exit' to quit.\n";
+    }
+
+    private function goodbyeMessage() {
+        echo "Goodbye! Exiting the PHP REPL.\n";
+    }
+
+    private function evaluate($input) {
+        ob_start();
+
+        try {
+            $this->history[] = $input;
+            $result = eval("return $input;");
+            $this->printResult($result);
+        } catch (Throwable $e) {
+            echo "Error: " . $e->getMessage() . "\n";
+        }
+
+        $output = ob_get_clean();
+
+        if (!empty($output)) {
+            echo $output;
+        }
+    }
+
+    private function printResult($result) {
+        if (is_object($result)) {
+            $className = get_class($result);
+            $objectId = spl_object_id($result);
+            $this->variables[$objectId] = $result;
+            echo "Object of class $className created with ID $objectId\n";
+        } else {
+            echo "Result: " . var_export($result, true) . "\n";
+        }
+    }
+
+    public function getObject($objectId) {
+        if (isset($this->variables[$objectId])) {
+            return $this->variables[$objectId];
+        }
+
+        return null;
+    }
+
+    public function getHistory() {
+        return $this->history;
+    }
+}
+
+// Start the REPL
+$repl = new REPL();
+$repl->start();
