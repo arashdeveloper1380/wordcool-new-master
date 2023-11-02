@@ -2,6 +2,7 @@
 
 namespace Core\View;
 
+use Core\View\Contracts\ViewInterface;
 use Exception;
 use Illuminate\View\Factory;
 use Illuminate\View\FileViewFinder;
@@ -10,7 +11,7 @@ use Illuminate\View\Engines\CompilerEngine;
 use Illuminate\View\Compilers\BladeCompiler;
 use Illuminate\Filesystem\Filesystem;
 
-class View {
+class View implements ViewInterface{
 
     private static $viewFactory;
 
@@ -29,8 +30,7 @@ class View {
         require_once $path;
     }
 
-    public static function blade($view, $data = [])
-    {
+    public static function blade($view, $data = []){
         if (!isset(self::$viewFactory)) {
             $viewPaths = [BASE_PATH . '/resources/views'];
             $fileSystem = new Filesystem;
