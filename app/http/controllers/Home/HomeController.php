@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use Corcel\Model\Post;
+use Core\Scheduler\Scheduler;
 use Illuminate\Database\Capsule\Manager as DB;
 
 class HomeController extends Controller{
@@ -21,6 +22,7 @@ class HomeController extends Controller{
         // dd(DB::table('wp_users')->first());
 
         dd(db()->table('wp_users')->first());
+        
     }
 
 }

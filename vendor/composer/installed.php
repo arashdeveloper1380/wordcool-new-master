@@ -3,7 +3,7 @@
         'name' => 'wordcool/arash-wordcool',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b4de399ad7c0cc6afdb1410efbb2d2294689cb93',
+        'reference' => '2f1282cd05dbec649661d53651669de743d253cb',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -400,7 +400,7 @@
         'wordcool/arash-wordcool' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b4de399ad7c0cc6afdb1410efbb2d2294689cb93',
+            'reference' => '2f1282cd05dbec649661d53651669de743d253cb',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
