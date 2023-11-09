@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Capsule\Manager as DB;
+use Illuminate\Events\Dispatcher;
+use Illuminate\Container\Container;
 
 // Eloquent
 $db = new DB;
@@ -14,6 +16,9 @@ $db->addConnection([
     'collation' => 'utf8_unicode_ci',
     'prefix' => '',
 ]);
+
+
+$db->setEventDispatcher(new Dispatcher(new Container));
 
 $db->setAsGlobal();
 $db->bootEloquent();

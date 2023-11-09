@@ -2,6 +2,9 @@
 
 namespace App\Command;
 
+require_once BASE  . '/config/database.php';
+
+use Corcel\Model\Post;
 use Core\Scheduler\Scheduler;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -21,9 +24,8 @@ class taskCommand extends Command
     {
         $scheduler = new Scheduler();
 
-        $scheduler->addTask('task', function(){
-            // db()->table('test')->insert(['name' => 'arash']);
-            echo "tst";
+        $scheduler->addTask('insert data', function(){
+            db()->table('test')->insert(['name' => 'arash']);
         }, 5);
 
         $scheduler->run();

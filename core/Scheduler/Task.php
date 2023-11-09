@@ -17,7 +17,7 @@ class Task {
     }
 
     public function run(){
-        echo "Running Task '{$this->name}' . " . PHP_EOL;
+        echo "[*] Running Task '{$this->name}' . " . PHP_EOL;
         call_user_func($this->callback);
         $this->lastRunTime = time();
     }
