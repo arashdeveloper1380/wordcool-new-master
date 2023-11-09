@@ -24,9 +24,13 @@ class taskCommand extends Command
     {
         $scheduler = new Scheduler();
 
-        $scheduler->addTask('insert data', function(){
-            db()->table('test')->insert(['name' => 'arash']);
-        }, 5);
+        // $scheduler->addTask('insert data', function(){
+        //     db()->table('test')->insert(['name' => 'arash']);
+        // }, Scheduler::everyTwoSeconds);
+        
+        $scheduler->hourlyAt('insert data', 17, function(){
+            echo "haa vallah";
+        });
 
         $scheduler->run();
     }
