@@ -22,6 +22,8 @@ class Scheduler{
     public const everyFifteenMinutes    = 900;
     public const everyThirtyMinutes     = 1800;
     public const hourly                 = 3600;
+    public const everyDay               = 86400;
+    public const everyWeek              = 604800;
 
     private $tasks = [];
 
@@ -33,6 +35,23 @@ class Scheduler{
     public function hourlyAt($name, $second, $callback){
         $interval = self::hourly;
         $interval += $second;
+        $this->addTask($name, $callback, $interval);
+    }
+
+    public function daily($name, $callback){
+        $interval = self::everyDay;
+        $this->addTask($name, $callback, $interval);
+    }
+    
+    public function dailyAt($name, $hour, $minute, $callback){
+        $interval = self::everyDay;
+        $interval += ($hour * 60 * 60) + ($minute * 60);
+        $this->addTask($name, $callback, $interval);
+    }
+
+    public function weekly($name, $dayOfWeek, $hour, $minute, $callback){
+        $interval = self::everyWeek;
+        $interval += ($dayOfWeek * 24 * 60 * 60) + ($hour * 60 * 60) + ($minute * 60);
         $this->addTask($name, $callback, $interval);
     }
 
