@@ -2,7 +2,7 @@
 
 namespace App\Command;
 
-require_once BASE  . '/config/database.php';
+// require_once BASE  . '/config/database.php';
 
 use Corcel\Model\Post;
 use Core\Scheduler\Scheduler;
@@ -28,9 +28,9 @@ class taskCommand extends Command
             db()->table('test')->insert(['name' => 'arash']);
         }, Scheduler::everyTwoSeconds);
 
-        $scheduler->hourlyAt('insert data', 17, function(){
-            echo "haa vallah ha";
-        });
+        // $scheduler->hourlyAt('insert data', 17, function(){
+        //     echo "haa vallah ha";
+        // });
 
         $scheduler->run();
     }
