@@ -2,9 +2,6 @@
 
 namespace App\Command;
 
-// require_once BASE  . '/config/database.php';
-
-use Corcel\Model\Post;
 use Core\Scheduler\Scheduler;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
