@@ -23,4 +23,5 @@ return array(
     '3697e6e7c26f427850d706b624d56b7f' => $baseDir . '/core/JsonQueryBuilder/Helpers/JsonQueryBuilderHelpers.php',
     'b0332d6b146bd600288acf97ca226fa1' => $baseDir . '/core/View/Helpers/ViewHelpers.php',
     'e264fcc509a48605974ba9848a277201' => $baseDir . '/core/Helpers/helpers.php',
+    '0cbdf18689852396ab342a8f08f02f70' => $baseDir . '/core/Event/Helpers/EventHelpers.php',
 );
