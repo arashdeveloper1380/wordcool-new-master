@@ -2,36 +2,75 @@
 
 namespace Core\Localization;
 
-class Localization {
+<?php
 
-    protected $language;
+class Localization
+{
+    protected $locale;
     protected $translations;
 
-    public function __construct($language = 'en') {
-        $this->language = $language;
+    public function __construct($locale)
+    {
+        $this->locale = $locale;
+        $this->translations = $this->loadTranslations();
     }
 
-    public function setLanguage($language){
-        $this->language = $language;
+
+//     protected function loadTranslations(){
+    //     $translations = [];
+
+    //     $filePath = 'path/to/translations/' . $this->locale . '.json';
+
+    //     // Check if the translation file exists
+    //     if (file_exists($filePath)) {
+    //         // Load and parse the translation file
+    //         $translationData = file_get_contents($filePath);
+    //         $translations = json_decode($translationData, true);
+    //     }
+
+    //     return $translations;
+    // }
+
+    protected function loadTranslations(){
+        $translations = [];
+
+        // English translations
+        $translations['en'] = [
+            'welcome' => 'Welcome!',
+            'greeting' => 'Hello :name',
+            'farewell' => 'Goodbye :name',
+        ];
+
+        // French translations
+        $translations['fr'] = [
+            'welcome' => 'Bienvenue!',
+            'greeting' => 'Bonjour :name',
+            'farewell' => 'Au revoir :name',
+        ];
+
+        return $translations;
     }
 
-    public function get($key, $placeholders = []){
-        $translation = $this->translations[$this->language][$key] ?? '';
+    public function getLocale()
+    {
+        return $this->locale;
+    }
 
-        foreach ($placeholders as $placeholder => $value) {
-            $translation = str_replace(":$placeholder", $value, $translation);
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+        $this->translations = $this->loadTranslations();
+    }
+
+    public function translate($key, $replacements = [])
+    {
+        $translation = $this->translations[$this->locale][$key] ?? $key;
+
+        // Perform replacements in the translation
+        foreach ($replacements as $search => $replace) {
+            $translation = str_replace($search, $replace, $translation);
         }
 
         return $translation;
     }
-
-    protected function loadTranslations()
-    {
-        $translationFiles = glob("translations/{$this->language}/*.php");
-
-        foreach ($translationFiles as $file) {
-            $this->translations[$this->language] = include "../../lang/" . $file;
-        }
-    }
-
 }
