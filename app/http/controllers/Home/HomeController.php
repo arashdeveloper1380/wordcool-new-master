@@ -9,16 +9,25 @@ use Core\Event\Event;
 class HomeController extends Controller{
 
     public function index(){
-        
-        addListener(
-            'UserRegisteredEvent', 
-            'UserRegisteredListener'
-        );
+        // $req = (new Request())->all();
+        // dd(request()->all());
+        // $name = "arash";
 
-        fire(
-            'UserRegisteredEvent', 
-            new UserRegisteredEvent('narimani')
-        );
+        // blade('index', compact('name'));
+
+        // render('index', compact('name'));
+
+        // dd(Post::all());
+        // dd(DB::table('wp_users')->first());
+
+        // dd(db()->table('wp_users')->first());
+
+        // Event::addListener('UserRegisteredEvent', 'UserRegisteredListener');
+
+        // Event::fire('UserRegisteredEvent', new UserRegisteredEvent('narimani'));
+
+        addListener('UserRegisteredEvent', 'UserRegisteredListener');
+        fire('UserRegisteredEvent', new UserRegisteredEvent('narimani'));
         
     }
 
