@@ -24,5 +24,9 @@ use Core\Router\Route;
 // Route::get('/(\w+)/test/(\w+)\?age=.*','Home/HomeController@index');
 Route::get('/','Home/HomeController@index');
 
+// Route::get('/', function() {
+//     echo "ha vallah";
+// }, '', 'testMiddleware');
+
 
 Route::dispatch();

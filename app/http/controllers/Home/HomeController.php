@@ -12,11 +12,11 @@ class HomeController extends Controller{
     public function index(){
         // $req = (new Request())->all();
         // dd(request()->all());
-        // $name = "arash";
+        $name = "arash";
 
         // blade('index', compact('name'));
 
-        // render('index', compact('name'));
+        render('index', compact('name'));
 
         // dd(Post::all());
         // dd(DB::table('wp_users')->first());
@@ -30,8 +30,8 @@ class HomeController extends Controller{
         // addListener('UserRegisteredEvent', 'UserRegisteredListener');
         // fire('UserRegisteredEvent', new UserRegisteredEvent('narimani'));
 
-        $localization = new Localization('en');
-        echo $localization->get('welcome');
+        // $localization = new Localization('en');
+        // echo $localization->get('welcome');
         
     }
 

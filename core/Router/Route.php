@@ -8,6 +8,7 @@ use Core\Router\Exceptions\RouteException;
 class Route implements RouteInterface{
 
     private static $routes = array();
+    private static array $middlewares = [];
 
     public static function get($url, $handler, $method = 'GET', $middleware = null) {
         self::addRoute($url, $handler, $method, 'GET', $middleware);
@@ -44,6 +45,10 @@ class Route implements RouteInterface{
         );
     }
     
+    public static function addMiddleware($middleware){
+        self::$middlewares[] = $middleware;
+    }
+
     public static function dispatch()
     {
         $uri = $_SERVER['REQUEST_URI'];
@@ -67,12 +72,32 @@ class Route implements RouteInterface{
                 parse_str($queryString, $queryParams);
                 $matches[] = $queryParams;
 
-                if (is_callable($route['handler'])) {
-                    call_user_func_array($route['handler'], $matches);
-                } else {
-                    self::callControllerMethod($route['handler'], $matches);
+                if ($route['middleware']) {
+                    $middlewares = explode(',', $route['middleware']);
+
+                    foreach ($middlewares as $middleware) {
+                        if (!in_array($middleware, self::$middlewares)) {
+                            throw new RouteException("Middleware '$middleware' is not registered", 500);
+                        }
+
+                        $middlewareClass = self::$middlewares[$middleware];
+                        $pathMiddleware = 'App\Http\Middlewares\\' . $middlewareClass;
+                        $middlewareObj = new $pathMiddleware();
+                        $middlewareObj->handle();
+
+                        if ($middlewareObj->shouldAbort()) {
+                            return false;
+                        }
+                    }
                 }
 
+                if (is_callable($route['handler'])) {
+                    call_user_func_array($route['handler'], $matches);
+                } 
+                else{
+                    self::callControllerMethod($route['handler'], $matches);
+                }
+                
                 $found = true;
                 return true;
             }

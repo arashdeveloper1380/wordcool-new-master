@@ -2,8 +2,6 @@
 
 namespace Core\Localization;
 
-<?php
-
 class Localization
 {
     protected $locale;
