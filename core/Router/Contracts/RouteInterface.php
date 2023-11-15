@@ -22,4 +22,6 @@ interface RouteInterface {
 
     public static function callControllerMethod($handler, $params);
 
+    public static function addMiddleware($middleware);
+
 }

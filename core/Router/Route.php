@@ -80,14 +80,14 @@ class Route implements RouteInterface{
                             throw new RouteException("Middleware '$middleware' is not registered", 500);
                         }
 
-                        $middlewareClass = self::$middlewares[$middleware];
+                        $middlewareClass = self::$middlewares[] = $middleware;
                         $pathMiddleware = 'App\Http\Middlewares\\' . $middlewareClass;
                         $middlewareObj = new $pathMiddleware();
                         $middlewareObj->handle();
 
-                        if ($middlewareObj->shouldAbort()) {
-                            return false;
-                        }
+                        // if ($middlewareObj->shouldAbort()) {
+                        //     return false;
+                        // }
                     }
                 }
 

@@ -8,13 +8,13 @@ class AuthMiddleware {
         if(1 === 1){
             return true;
         }
-        else{
-            $this->shouldAbort();
-        }
+        $this->shouldAbort();
+        
     }
 
     public function shouldAbort(){
-        header('location:/');
+        header('Location: https://google.com');
+        die();
     }
 
 }
