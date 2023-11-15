@@ -84,6 +84,10 @@ class Route implements RouteInterface{
                         $pathMiddleware = 'App\Http\Middlewares\\' . $middlewareClass;
                         $middlewareObj = new $pathMiddleware();
                         $middlewareObj->handle();
+                        
+                        if($middlewareObj->handle() != true){
+                            return false;
+                        }
 
                         // if ($middlewareObj->shouldAbort()) {
                         //     return false;

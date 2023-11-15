@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Middlewares\AuthMiddleware;
+use App\Http\Controllers\Home\HomeController;
 use Core\Router\Route;
+
+require_once BASE_PATH . '/app/kernel.php';
 
 // params => ([\w-]+) support a-z A-Z 0-9 -_
 // params => (\w+) support a-z A-Z 0-9 _
@@ -23,10 +25,9 @@ use Core\Router\Route;
 // Route::get('/(\w+)/test/(\w+)\?age=.*','Home/HomeController@index');
 // Route::get('/','Home/HomeController@index');
 
-Route::addMiddleware('AuthMiddleware');
 Route::get('/', function() {
-    echo "ha vallah";
-}, 'GET', 'AuthMiddleware');
+    (new HomeController)->index();
+}, '', 'AuthMiddleware');
 
 
 Route::dispatch();
