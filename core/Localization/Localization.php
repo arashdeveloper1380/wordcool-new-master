@@ -4,69 +4,39 @@ namespace Core\Localization;
 
 class Localization
 {
-    protected $locale;
-    protected $translations;
+    private $translations;
+    private $locale;
 
     public function __construct($locale)
     {
         $this->locale = $locale;
-        $this->translations = $this->loadTranslations();
+        $this->loadTranslations();
     }
 
-
-//     protected function loadTranslations(){
-    //     $translations = [];
-
-    //     $filePath = 'path/to/translations/' . $this->locale . '.json';
-
-    //     // Check if the translation file exists
-    //     if (file_exists($filePath)) {
-    //         // Load and parse the translation file
-    //         $translationData = file_get_contents($filePath);
-    //         $translations = json_decode($translationData, true);
-    //     }
-
-    //     return $translations;
-    // }
-
-    protected function loadTranslations(){
-        $translations = [];
-
-        // English translations
-        $translations['en'] = [
-            'welcome' => 'Welcome!',
-            'greeting' => 'Hello :name',
-            'farewell' => 'Goodbye :name',
-        ];
-
-        // French translations
-        $translations['fr'] = [
-            'welcome' => 'Bienvenue!',
-            'greeting' => 'Bonjour :name',
-            'farewell' => 'Au revoir :name',
-        ];
-
-        return $translations;
-    }
-
-    public function getLocale()
+    private function loadTranslations()
     {
-        return $this->locale;
-    }
-
-    public function setLocale($locale)
-    {
-        $this->locale = $locale;
-        $this->translations = $this->loadTranslations();
+        $translationsFile = BASE_PATH . '/lang/' . $this->locale . '.php';
+        if (file_exists($translationsFile)) {
+            $this->translations = require($translationsFile);
+        } else {
+            throw new \Exception("Translation file not found for locale: " . $this->locale);
+        }
     }
 
     public function translate($key, $replacements = [])
     {
-        $translation = $this->translations[$this->locale][$key] ?? $key;
+        $translation = $this->translations;
 
-        // Perform replacements in the translation
-        foreach ($replacements as $search => $replace) {
-            $translation = str_replace($search, $replace, $translation);
+        foreach (explode('.', $key) as $segment) {
+            if (isset($translation[$segment])) {
+                $translation = $translation[$segment];
+            } else {
+                return $key;
+            }
+        }
+
+        if (!empty($replacements)) {
+            $translation = strtr($translation, $replacements);
         }
 
         return $translation;

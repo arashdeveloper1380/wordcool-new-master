@@ -21,7 +21,6 @@ class Boot {
 
     public function requirments(){
         require_once BASE_PATH . '/routes/web.php';
-        
     }
 
     public function activePlugin(){
