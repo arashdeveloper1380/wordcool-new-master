@@ -2,7 +2,9 @@
 
 namespace Core\Localization;
 
-class Localization
+use Core\Localization\Contracts\LocalizationInterface;
+
+class Localization implements LocalizationInterface
 {
     private $translations;
     private $locale;
@@ -12,7 +14,7 @@ class Localization
         $this->loadTranslations();
     }
 
-    private function loadTranslations(){
+    public function loadTranslations(){
         $translationsFile = BASE_PATH . '/lang/' . $this->locale . '.php';
         if (file_exists($translationsFile)) {
             $this->translations = require($translationsFile);
