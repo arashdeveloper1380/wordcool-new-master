@@ -16,7 +16,7 @@ class HomeController extends Controller{
 
         // blade('index', compact('name'));
 
-        render('index', compact('name'));
+//        render('index', compact('name'));
 
         // dd(Post::all());
         // dd(DB::table('wp_users')->first());
@@ -30,8 +30,10 @@ class HomeController extends Controller{
         // addListener('UserRegisteredEvent', 'UserRegisteredListener');
         // fire('UserRegisteredEvent', new UserRegisteredEvent('narimani'));
 
-        // $localization = new Localization('en');
-        // echo $localization->get('welcome');
+        $locale = 'fa';
+        $localization = new Localization($locale);
+        echo $localization->translate('say', ['name' => 'آرش']) . PHP_EOL;
+
         
     }
 
