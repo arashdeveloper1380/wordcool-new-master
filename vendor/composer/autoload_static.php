@@ -25,6 +25,7 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         'b0332d6b146bd600288acf97ca226fa1' => __DIR__ . '/../..' . '/core/View/Helpers/ViewHelpers.php',
         'e264fcc509a48605974ba9848a277201' => __DIR__ . '/../..' . '/core/Helpers/helpers.php',
         '0cbdf18689852396ab342a8f08f02f70' => __DIR__ . '/../..' . '/core/Event/Helpers/EventHelpers.php',
+        '2f15ef3dbf4421119b9d635fe84168c6' => __DIR__ . '/../..' . '/core/Localization/Helpers/LocalizationHelpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (

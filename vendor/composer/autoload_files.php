@@ -24,4 +24,5 @@ return array(
     'b0332d6b146bd600288acf97ca226fa1' => $baseDir . '/core/View/Helpers/ViewHelpers.php',
     'e264fcc509a48605974ba9848a277201' => $baseDir . '/core/Helpers/helpers.php',
     '0cbdf18689852396ab342a8f08f02f70' => $baseDir . '/core/Event/Helpers/EventHelpers.php',
+    '2f15ef3dbf4421119b9d635fe84168c6' => $baseDir . '/core/Localization/Helpers/LocalizationHelpers.php',
 );

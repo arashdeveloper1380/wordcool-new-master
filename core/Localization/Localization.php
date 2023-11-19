@@ -7,14 +7,12 @@ class Localization
     private $translations;
     private $locale;
 
-    public function __construct($locale)
-    {
+    public function __construct($locale){
         $this->locale = $locale;
         $this->loadTranslations();
     }
 
-    private function loadTranslations()
-    {
+    private function loadTranslations(){
         $translationsFile = BASE_PATH . '/lang/' . $this->locale . '.php';
         if (file_exists($translationsFile)) {
             $this->translations = require($translationsFile);
@@ -23,8 +21,7 @@ class Localization
         }
     }
 
-    public function translate($key, $replacements = [])
-    {
+    public function translate($key, $replacements = []){
         $translation = $this->translations;
 
         foreach (explode('.', $key) as $segment) {
