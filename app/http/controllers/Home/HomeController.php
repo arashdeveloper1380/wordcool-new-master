@@ -30,7 +30,7 @@ class HomeController extends Controller{
         // addListener('UserRegisteredEvent', 'UserRegisteredListener');
         // fire('UserRegisteredEvent', new UserRegisteredEvent('narimani'));
 
-        $locale = 'fa';
+        $locale = 'en';
         $localization = new Localization($locale);
         echo $localization->translate('say', ['name' => 'آرش']) . PHP_EOL;
 

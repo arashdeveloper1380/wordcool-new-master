@@ -2,5 +2,5 @@
 
 return [
     'welcome'   => 'Welcome to our website!',
-    'say'       => 'Hello, :name!',
+    'say'       => 'Hello name',
 ];
