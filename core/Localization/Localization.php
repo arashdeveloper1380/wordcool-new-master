@@ -15,7 +15,10 @@ class Localization implements LocalizationInterface
     }
 
     public function loadTranslations(){
-        $translationsFile = BASE_PATH . '/lang/' . $this->locale . '.php';
+        // $translationsFile = BASE_PATH . '/lang/' . $this->locale . '.php';
+        $baseDir = realpath(__DIR__ . '../../../lang');
+        $translationsFile = $baseDir . '/' . $this->locale . '.php';
+        
         if (file_exists($translationsFile)) {
             $this->translations = require($translationsFile);
         } else {
