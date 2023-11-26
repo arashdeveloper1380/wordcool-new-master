@@ -13,7 +13,8 @@
             "core/View/Helpers/ViewHelpers.php",
             "core/Helpers/helpers.php",
             "core/Event/Helpers/EventHelpers.php",
-            "core/Localization/Helpers/LocalizationHelpers.php"
+            "core/Localization/Helpers/LocalizationHelpers.php",
+            "core/Session/Helpers/SessionHelpers.php"
         ]
     },
     "authors": [
