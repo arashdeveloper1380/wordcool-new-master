@@ -35,6 +35,8 @@ class HomeController extends Controller{
 //        echo $localization->translate('say', ['name' => 'آرش']) . PHP_EOL;
 
         echo lang('fa')->translate('welcome');
+
+//        session()->get();
         
     }
 

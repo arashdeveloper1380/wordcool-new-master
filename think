@@ -72,6 +72,18 @@ class REPL {
     }
 }
 
+class Example {
+public function sayHello($name) {
+        echo "Hello, $name!";
+   }
+}
+
+if(!function_exists('example')){
+    function example(){
+        return new Example();
+    }
+}
+
 // Start the REPL
 $repl = new REPL();
 $repl->start();
