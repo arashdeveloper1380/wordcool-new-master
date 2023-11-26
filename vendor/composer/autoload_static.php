@@ -16,9 +16,10 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
-        'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'bb0b77f7baa5b3d9461191652a13426b' => __DIR__ . '/../..' . '/core/Router/Helpers/RouteHelpers.php',
         '4bceefc4bc6ec8c49742e0d3cfb741bd' => __DIR__ . '/../..' . '/core/Request/Helpers/RequestHelpers.php',
         '3697e6e7c26f427850d706b624d56b7f' => __DIR__ . '/../..' . '/core/JsonQueryBuilder/Helpers/JsonQueryBuilderHelpers.php',
@@ -55,9 +56,11 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         ),
         'P' => 
         array (
+            'Psy\\' => 4,
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Container\\' => 14,
             'Psr\\Clock\\' => 10,
+            'PhpParser\\' => 10,
             'PhpOption\\' => 10,
         ),
         'I' => 
@@ -159,6 +162,10 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Psy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psy/psysh/src',
+        ),
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
@@ -170,6 +177,10 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         'Psr\\Clock\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/clock/src',
+        ),
+        'PhpParser\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
         'PhpOption\\' => 
         array (
