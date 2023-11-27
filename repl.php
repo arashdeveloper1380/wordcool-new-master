@@ -5,7 +5,7 @@ require 'vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-require_once __DIR__ . './config/database.php';
+require_once 'config/database.php';
 
 use Psy\Shell;
 
