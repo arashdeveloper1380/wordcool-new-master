@@ -36,7 +36,7 @@ class HomeController extends Controller{
 //        $localization = new Localization($locale);
 //        echo $localization->translate('say', ['name' => 'آرش']) . PHP_EOL;
 
-        echo lang('fa')->translate('welcome');
+//        echo lang('fa')->translate('welcome');
 
 //        $formBuilder = new FormBuilder('submit.php', 'post');
 //        $formBuilder->setFormClasses(['form', 'custom-form'])
