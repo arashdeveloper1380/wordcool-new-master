@@ -28,6 +28,12 @@ class HtmlGenerator
 
     public function build(): string {
         $attributes = $this->renderAttributes();
+
+        $selfClosingTags = ['img', 'hr', 'br', 'input', 'meta', 'link'];
+        if (in_array($this->tagName, $selfClosingTags)) {
+            return "<{$this->tagName}{$attributes} />";
+        }
+
         $children = $this->renderChildren();
         return "<{$this->tagName}{$attributes}>{$children}</{$this->tagName}>";
     }
