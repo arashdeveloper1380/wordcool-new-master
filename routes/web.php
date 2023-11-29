@@ -29,5 +29,9 @@ Route::get('/', function() {
     (new HomeController)->index();
 }, '', 'AuthMiddleware');
 
+Route::post('/store/(\w+)', function($id) {
+    (new HomeController)->store($id);
+}, '', 'AuthMiddleware');
+
 
 Route::dispatch();

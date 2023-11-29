@@ -14,6 +14,6 @@
 <body>
     <?= $name; ?>
 
-    <?= form('/', 'POST')->handle('SimpleForm'); ?>
+    <?= form(route('/store', '12'), 'POST')->handle('SimpleForm'); ?>
 </body>
 </html>
