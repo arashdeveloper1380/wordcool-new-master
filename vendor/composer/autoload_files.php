@@ -27,4 +27,5 @@ return array(
     '0cbdf18689852396ab342a8f08f02f70' => $baseDir . '/core/Event/Helpers/EventHelpers.php',
     '2f15ef3dbf4421119b9d635fe84168c6' => $baseDir . '/core/Localization/Helpers/LocalizationHelpers.php',
     'f6c0bb062c7a10a41811706c66b1538a' => $baseDir . '/core/Session/Helpers/SessionHelpers.php',
+    '14d1b8e098c9de4769b18399d1f9a11e' => $baseDir . '/core/FormBuilder/Helpers/FormBuilderHelpers.php',
 );

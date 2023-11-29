@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Home;
 
 use App\Events\UserRegisteredEvent;
 use App\Http\Controllers\Controller;
+use App\Http\Forms\SimpleForm;
 use Core\Event\Event;
+use Core\FormBuilder\FormBuilder;
 use Core\Localization\Localization;
 
 class HomeController extends Controller{
@@ -16,7 +18,7 @@ class HomeController extends Controller{
 
         // blade('index', compact('name'));
 
-        //render('index', compact('name'));
+        render('index', compact('name'));
 
         // dd(Post::all());
         // dd(DB::table('wp_users')->first());
@@ -36,8 +38,22 @@ class HomeController extends Controller{
 
         echo lang('fa')->translate('welcome');
 
-//        session()->get();
-        
+//        $formBuilder = new FormBuilder('submit.php', 'post');
+//        $formBuilder->setFormClasses(['form', 'custom-form'])
+//            ->setLabelClasses(['custom-label', 'text-bold'])
+//            ->addFieldClasses('text', ['custom-field', 'text-input'])
+//            ->addFieldClasses('select', ['custom-field', 'select-input'])
+//            ->addFieldClasses('textarea', ['custom-field', 'textarea-input'])
+//            ->setButtonClasses(['btn', 'btn-primary'])
+//            ->addField('username', 'text', 'Enter your username', 'Username')
+//            ->addField('password', 'password', 'Enter your password', 'Password')
+//            ->addField('gender', 'select', '', 'Gender', ['' => 'Select...', 'm' => 'Male', 'f' => 'Female'])
+//            ->addField('bio', 'textarea', 'Bio', 'Biography')
+//            ->build();
+
+//        $formBuilder->handle('SimpleForm');
+
+//        form('/', 'POST')->handle('SimpleForm');
     }
 
 }

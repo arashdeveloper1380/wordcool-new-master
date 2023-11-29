@@ -14,7 +14,8 @@
             "core/Helpers/helpers.php",
             "core/Event/Helpers/EventHelpers.php",
             "core/Localization/Helpers/LocalizationHelpers.php",
-            "core/Session/Helpers/SessionHelpers.php"
+            "core/Session/Helpers/SessionHelpers.php",
+            "core/FormBuilder/Helpers/FormBuilderHelpers.php"
         ]
     },
     "authors": [
