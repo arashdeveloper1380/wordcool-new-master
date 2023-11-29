@@ -89,7 +89,7 @@ class FormBuilder
         echo "</form>\n";
     }
 
-    public function handle(string $class) : void{
+    public function render(string $class) : void{
         $namespace = "App\Http\Forms\\";
         $className = $namespace . $class;
         if(class_exists($className)){

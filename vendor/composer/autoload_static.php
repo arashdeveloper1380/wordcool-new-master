@@ -29,6 +29,7 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         '2f15ef3dbf4421119b9d635fe84168c6' => __DIR__ . '/../..' . '/core/Localization/Helpers/LocalizationHelpers.php',
         'f6c0bb062c7a10a41811706c66b1538a' => __DIR__ . '/../..' . '/core/Session/Helpers/SessionHelpers.php',
         '14d1b8e098c9de4769b18399d1f9a11e' => __DIR__ . '/../..' . '/core/FormBuilder/Helpers/FormBuilderHelpers.php',
+        '88c94af259da05b30bda12e553843e33' => __DIR__ . '/../..' . '/core/HtmlGenerator/Helpers/HtmlGeneratorHelpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (

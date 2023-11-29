@@ -14,9 +14,12 @@
 <body>
     <?= $name; ?>
 
+<!--    --><?php //=
+//        form(route('/store', '12'), 'POST')
+//            ->render('SimpleForm');
+//    ?>
     <?=
-        form(route('/store', '12'), 'POST')
-            ->handle('SimpleForm');
+        html()->section('Nav')
     ?>
 </body>
 </html>
