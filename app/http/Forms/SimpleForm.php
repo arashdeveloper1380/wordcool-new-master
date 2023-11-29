@@ -7,7 +7,6 @@ use Core\FormBuilder\FormBuilder;
 class SimpleForm
 {
     private object $builder;
-
     public function __construct(FormBuilder $builder){
         $this->builder = $builder;
     }

@@ -56,4 +56,8 @@ class HomeController extends Controller{
 //        form('/', 'POST')->handle('SimpleForm');
     }
 
+    public function store($id){
+        dd("Store Data . $id");
+    }
+
 }
