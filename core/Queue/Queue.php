@@ -15,7 +15,7 @@ abstract class Job implements JobInterface {
 class SomeJob extends Job {
     public function handle() {
         // Task logic goes here
-        echo "Job is being processed...\n ";
+        echo "Job is being processed...\n";
     }
 }
 
