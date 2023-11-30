@@ -1,7 +1,5 @@
 <?php
 
-//include realpath(__DIR__ . '../../vendor/autoload.php');
-
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Migrations\Migration;
 
@@ -18,6 +16,6 @@ class CreateCustomerTable extends Migration
 
     public function down()
     {
-        Capsule::schema()->dropIfExists('wp_test');
+        Capsule::schema()->dropIfExists('wp_customer');
     }
 }

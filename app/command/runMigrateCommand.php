@@ -32,7 +32,13 @@ class runMigrateCommand extends Command
 
             $output->writeln([
                 "",
-                "[*] ".$table_class. " Migrate Successfully",
+                "[*] ".$migrationName. " Migrated Successfully",
+                '',
+            ]);
+        }else {
+            $output->writeln([
+                "",
+                "[!] Migration file for {$migrationName} does not exist.",
                 '',
             ]);
         }
