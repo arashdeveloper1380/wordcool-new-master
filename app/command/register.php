@@ -7,6 +7,7 @@ use App\Command\MakeCommandCommand;
 use App\Command\MakeControllerCommand;
 use App\Command\MakeModelCommand;
 use App\Command\taskCommand;
+use App\Command\runMigrateCommand;
 
 $application->addCommands([
     new HelloCommand(),
@@ -14,4 +15,5 @@ $application->addCommands([
     new MakeModelCommand(),
     new MakeCommandCommand(),
     new taskCommand(),
+    new runMigrateCommand()
 ]);

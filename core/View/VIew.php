@@ -12,9 +12,7 @@ use Illuminate\View\Compilers\BladeCompiler;
 use Illuminate\Filesystem\Filesystem;
 
 class View implements ViewInterface{
-
     private static $viewFactory;
-
     public static function render($view, $data = []){
 
         extract($data);

@@ -67,13 +67,11 @@ class TextNode extends HtmlGenerator
 {
     protected $text;
 
-    public function __construct(string $text)
-    {
+    public function __construct(string $text){
         $this->text = $text;
     }
 
-    public function build(): string
-    {
+    public function build(): string{
         return htmlspecialchars($this->text, ENT_QUOTES, 'UTF-8');
     }
 }
