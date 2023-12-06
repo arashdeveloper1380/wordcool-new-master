@@ -29,4 +29,5 @@ return array(
     'f6c0bb062c7a10a41811706c66b1538a' => $baseDir . '/core/Session/Helpers/SessionHelpers.php',
     '14d1b8e098c9de4769b18399d1f9a11e' => $baseDir . '/core/FormBuilder/Helpers/FormBuilderHelpers.php',
     '88c94af259da05b30bda12e553843e33' => $baseDir . '/core/HtmlGenerator/Helpers/HtmlGeneratorHelpers.php',
+    'cb3e64cb34a9d1cdfe674f64627b4598' => $baseDir . '/core/FileStorage/Helpers/FileStorageHelper.php',
 );

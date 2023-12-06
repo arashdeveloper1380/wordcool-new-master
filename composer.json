@@ -16,7 +16,8 @@
             "core/Localization/Helpers/LocalizationHelpers.php",
             "core/Session/Helpers/SessionHelpers.php",
             "core/FormBuilder/Helpers/FormBuilderHelpers.php",
-            "core/HtmlGenerator/Helpers/HtmlGeneratorHelpers.php"
+            "core/HtmlGenerator/Helpers/HtmlGeneratorHelpers.php",
+            "core/FileStorage/Helpers/FileStorageHelper.php"
         ]
     },
     "authors": [
