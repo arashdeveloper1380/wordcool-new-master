@@ -1,5 +1,10 @@
 <?php
-class FileStorage
+
+namespace Core\FileStorage;
+
+use Core\FileStorage\Contracts\FileStorageInterface;
+
+class FileStorage implements FileStorageInterface
 {
     protected $basePath;
 
