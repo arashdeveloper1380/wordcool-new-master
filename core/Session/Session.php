@@ -27,7 +27,7 @@ class Session{
     }
 
     public function flash($key, $value){
-        $this->push($key, $value);
+        $this->put($key, $value);
         $this->sessionData[$key] = true;
     }
 

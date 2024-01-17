@@ -13,7 +13,7 @@ class SimpleForm
 
     public function render() :void {
          $this->builder
-             ->setFormClasses(['form', 'custom-form'])
+         ->setFormClasses(['form', 'custom-form'])
              ->setLabelClasses(['custom-label', 'text-bold'])
              ->addFieldClasses('text', ['custom-field', 'text-input'])
              ->addFieldClasses('select', ['custom-field', 'select-input'])

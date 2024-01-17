@@ -18,12 +18,12 @@ require_once BASE_PATH . '/app/kernel.php';
 //     echo "name is : {$name} and lname is : {$lname} and Age is : {$_GET['age']}";
 // });
 
-// // Route::get('/blog/(\w+)', function($id){
-// //     echo "home $id";
-// // });
+Route::get('/blog', function(){
+    echo "blog page";
+});
 
 // Route::get('/(\w+)/test/(\w+)\?age=.*','Home/HomeController@index');
-// Route::get('/','Home/HomeController@index');
+Route::get('/','Home/HomeController@index');
 
 Route::get('/', function() {
     (new HomeController)->index();
