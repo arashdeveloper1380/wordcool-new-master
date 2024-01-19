@@ -14,6 +14,16 @@
 <body>
     <?= $name; ?>
 
+
+    <?= 
+        do_shortcode(
+            '[
+                simple_shortcode name="arash" lname="narimani"
+            ]'
+        ) 
+    ?>
+
+
     <?=
         form(route('/store', '12'), 'POST')
             ->render('SimpleForm');

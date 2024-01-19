@@ -49,10 +49,9 @@ class RouteApi implements RouteApiInterface
     public static function addRoute(
         string $url, $handler, string $method, ?string $middleware = null
     ): void {
-        $urlPattern = '#^' . $url . '$#'; 
-
+        $url = preg_replace('/:([a-zA-Z]+)/', '([a-zA-Z]+)', $url);
         self::$routes[] = [
-            'url' => $urlPattern,
+            'url' => $url,
             'handler' => $handler,
             'method' => $method,
             'middleware' => $middleware,
@@ -67,15 +66,19 @@ class RouteApi implements RouteApiInterface
 
     public static function dispatch(): bool
     {
-        $uri    = $_SERVER['REQUEST_URI'];
+        $uri    = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $method = $_SERVER['REQUEST_METHOD'];
+        
 
         foreach (self::$routes as $route) {
             if ($route['method'] != $method) {
                 continue;
             }
+            
+            $pattern = '#^' . dirname($_SERVER['SCRIPT_NAME']) . $route['url'] . '$#';
 
-            if (preg_match($route['url'], $uri, $matches)) {
+            if (preg_match($pattern, $uri, $matches)) {
+                dd($matches);
                 array_shift($matches);
 
                 $queryParams = self::extractQueryParams($uri);

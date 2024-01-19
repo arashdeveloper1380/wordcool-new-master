@@ -60,4 +60,10 @@ class HomeController extends Controller{
         dd("Store Data . $id");
     }
 
+    public function api(){
+        return [
+            'name' => 'arash'
+        ];
+    }
+
 }
