@@ -14,14 +14,8 @@
 <body>
     <?= $name; ?>
 
-
-    <?= 
-        do_shortcode(
-            '[
-                simple_shortcode name="arash" lname="narimani"
-            ]'
-        ) 
-    ?>
+    
+    <?= do_shortcode("[simple_shortcode name='arash' lname='narimani']") ?>
 
 
     <?=

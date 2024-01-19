@@ -8,5 +8,10 @@
 </head>
 <body>
     {{ $name }}
+    <br><br>
+
+    {{ 
+        do_shortcode("[simple_shortcode name='arash' lname='narimani']") 
+    }}
 </body>
 </html>

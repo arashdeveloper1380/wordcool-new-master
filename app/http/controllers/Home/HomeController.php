@@ -18,7 +18,7 @@ class HomeController extends Controller{
 
         // blade('index', compact('name'));
 
-        render('index', compact('name'));
+        blade('index', compact('name'));
 
         // dd(Post::all());
         // dd(DB::table('wp_users')->first());

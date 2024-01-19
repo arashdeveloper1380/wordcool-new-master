@@ -12,13 +12,13 @@ class ShortCode {
         add_action('init', [$this, 'make']);
     }
 
-    public function make($shortcode = '', $shortcodeCallback = null) {
+    public function make(string $shortcode = '', $shortcodeCallback = null) :void {
         if (!empty($shortcode) && is_callable($shortcodeCallback)) {
             add_shortcode($shortcode, $shortcodeCallback);
         }
     }
 
-    public function register(string $class) {
+    public function register(string $class) :void {
         $namespace = 'App\Http\ShortCodes\\';
         $className = $namespace . $class;
         if (class_exists($className)) {
