@@ -1,5 +1,7 @@
 <?php
 
+use Core\AdminMenuPage\MenuManager;
+use App\Http\AddMenuPage\MyCustomMenuPage;
 class Boot {
 
     public function __construct(){
@@ -21,6 +23,7 @@ class Boot {
 
     public function requirments(){
         require_once BASE_PATH . '/routes/web.php';
+        require_once BASE_PATH . '/functions.php';
     }
 
     public function activePlugin(){
