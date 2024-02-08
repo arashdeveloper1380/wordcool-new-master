@@ -25,3 +25,9 @@ if(!function_exists('rdelete')){
         Route::delete($url, $handler);
     }
 }
+
+if(!function_exists('route')){
+    function route($route){
+        return home_url() . "/{$route}";
+    }
+}

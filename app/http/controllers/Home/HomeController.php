@@ -8,18 +8,26 @@ use App\Http\Forms\SimpleForm;
 use Core\Event\Event;
 use Core\FormBuilder\FormBuilder;
 use Core\Localization\Localization;
+use Corcel\Model\Post;
+use Core\JsonQueryBuilder\JsonQueryBuilder;
 
 class HomeController extends Controller{
 
     public function index(){
         // $req = (new Request())->all();
         // dd(request()->all());
+        // $locale = 'en';
+        // $localization = new Localization($locale);
+        // echo $localization->translate('say', ['name' => 'آرش']) . PHP_EOL;
+
+        // echo lang('fa')->translate('welcome');
+
         $name = "arash";
 
         // blade('index', compact('name'));
 
         blade('index', compact('name'));
-
+        
         // dd(Post::all());
         // dd(DB::table('wp_users')->first());
 
@@ -54,16 +62,43 @@ class HomeController extends Controller{
 //        $formBuilder->handle('SimpleForm');
 
 //        form('/', 'POST')->handle('SimpleForm');
+
     }
 
     public function store($id){
         dd("Store Data . $id");
     }
 
-    public function api(){
-        return [
-            'name' => 'arash'
-        ];
+    // public function api(){
+    //     return [
+    //         'name' => 'arash'
+    //     ];
+    // }
+
+    // public function display_category_posts(string $category) : void{
+    //     $posts = Post::taxonomy('category', $category)->first();
+    //     dd($posts);
+    //     blade('index', compact('posts'));
+    // }
+
+    public function jsonHanlde(){
+        $jsonHandle = new JsonQueryBuilder('app/Controllers/users.json');
+
+        $result = $jsonHandle->select(['name', 'age'])
+            ->from('books')
+            ->get();
+
+        $count = $jsonHandle->count();
+
+        $result = $jsonHandle->select(['id', 'name', 'age'])
+            ->from('users')
+            ->orderBy('id','desc')
+            ->where('age', '>', '30')
+            ->get();
+
+        $find = $jsonHandle->find('name','arash')->get();
+        $first = $jsonHandle->where('name', '=', 'arash')->first();
+        dd($first);
     }
 
 }

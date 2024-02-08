@@ -1,6 +1,7 @@
 <?php
 
 namespace Core\Session;
+
 class Session{
 
     protected $sessionData = [];

@@ -30,4 +30,6 @@ return array(
     '14d1b8e098c9de4769b18399d1f9a11e' => $baseDir . '/core/FormBuilder/Helpers/FormBuilderHelpers.php',
     '88c94af259da05b30bda12e553843e33' => $baseDir . '/core/HtmlGenerator/Helpers/HtmlGeneratorHelpers.php',
     'cb3e64cb34a9d1cdfe674f64627b4598' => $baseDir . '/core/FileStorage/Helpers/FileStorageHelper.php',
+    '54ac81ba4633cdf9c21731e2038c7c36' => $baseDir . '/core/Csrf/Helpers/CsrfHelpers.php',
+    'f546e9af89be0ff8523a2dcbcbee4df5' => $baseDir . '/core/Redirect/Helpers/RedirectHelpers.php',
 );

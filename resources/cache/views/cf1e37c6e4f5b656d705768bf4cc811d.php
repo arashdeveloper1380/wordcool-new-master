@@ -13,5 +13,7 @@
 
     <?php echo e(do_shortcode("[simple_shortcode name='arash' lname='narimani']")); ?>
 
+    
+    
 </body>
 </html><?php /**PATH C:\xampp\htdocs\wordcool\wp-content\plugins\wordcool-new-master\resources\views/index.blade.php ENDPATH**/ ?>
