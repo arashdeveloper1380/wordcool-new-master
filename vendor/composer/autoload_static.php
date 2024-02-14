@@ -92,6 +92,7 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         array (
             'Dotenv\\' => 7,
             'Doctrine\\Inflector\\' => 19,
+            'Database\\' => 9,
         ),
         'C' => 
         array (
@@ -245,6 +246,10 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         'Doctrine\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
+        ),
+        'Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/database',
         ),
         'Core\\' => 
         array (

@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seedders;
+namespace Database\Seeders;
 
 use App\Models\Test;
 use Core\Seeder\Seeder;

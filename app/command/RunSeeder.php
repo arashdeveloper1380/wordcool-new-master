@@ -2,7 +2,7 @@
 
 namespace App\Command;
 
-use Database\Seedders\DatabaseSeeder;
+use Database\Seeders\DatabaseSeeder;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -15,17 +15,17 @@ class RunSeeder extends Command
     protected function configure()
     {
         $this->setDescription('Run Sedder you need ')
-            ->setHelp('This command say hello');
-            // ->addArgument('seederName', InputArgument::REQUIRED, 'the name of the command to run');
+            ->setHelp('This command say hello')
+            ->addArgument('seederName', InputArgument::REQUIRED, 'the name of the command to Seed Data');
+
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        // $seederName = $input->getArgument('seederName');
-        $databaseSeeder = BASE . '/database/seeders/DatabaseSeeder.php';
-        if(file_exists($databaseSeeder)){
-            require($databaseSeeder);
-            $obj = new DatabaseSeeder();
+        $class = $input->getArgument('migrationName');
+        $namespace = '\Database\Seeders\\' . $class;
+        if(class_exists($namespace)){
+            $obj = new $namespace();
             $obj->run();
             $output->writeln([
                 "",

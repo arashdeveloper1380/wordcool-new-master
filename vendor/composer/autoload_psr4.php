@@ -39,6 +39,7 @@ return array(
     'Faker\\' => array($vendorDir . '/fakerphp/faker/src/Faker'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'Doctrine\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Inflector'),
+    'Database\\' => array($baseDir . '/database'),
     'Core\\' => array($baseDir . '/core'),
     'Corcel\\Tests\\' => array($vendorDir . '/jgrossi/corcel/tests'),
     'Corcel\\' => array($vendorDir . '/jgrossi/corcel/src'),

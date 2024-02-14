@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seedders;
+namespace Database\Seeders;
 
 use Core\Seeder\Seeder;
 

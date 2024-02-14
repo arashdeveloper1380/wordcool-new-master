@@ -6,8 +6,7 @@ use Core\Seeder\Contracts\SeederInterface;
 
 class Seeder implements SeederInterface{
 
-    protected object $model;
-
+    protected $model;
     protected array $data;
 
     public function run() : void{
@@ -17,7 +16,7 @@ class Seeder implements SeederInterface{
     }
 
     public function call(string $class): void{
-        $class = 'Database\Seedders\\' . $class;
+        $class = 'Database\Seeders\\' . $class;
         if(class_exists($class)){
             $obj = new $class();
             $obj->run();
