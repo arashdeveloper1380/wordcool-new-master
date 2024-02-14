@@ -1,7 +1,5 @@
 <?php
 
-use Core\AdminMenuPage\MenuManager;
-use App\Http\AddMenuPage\MyCustomMenuPage;
 class Boot {
 
     public function __construct(){

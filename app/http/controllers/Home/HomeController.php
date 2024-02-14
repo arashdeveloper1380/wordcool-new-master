@@ -75,11 +75,15 @@ class HomeController extends Controller{
     //     ];
     // }
 
-    // public function display_category_posts(string $category) : void{
-    //     $posts = Post::taxonomy('category', $category)->first();
-    //     dd($posts);
-    //     blade('index', compact('posts'));
-    // }
+    public function display_category_posts(
+        string $category
+        ) : void{
+
+        $posts = Post::taxonomy('category', $category)
+            ->first();
+            
+        blade('index', compact('posts'));
+    }
 
     public function jsonHanlde(){
         $jsonHandle = new JsonQueryBuilder('app/Controllers/users.json');

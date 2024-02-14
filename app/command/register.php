@@ -9,6 +9,7 @@ use App\Command\MakeModelCommand;
 use App\Command\taskCommand;
 use App\Command\runMigrateCommand;
 use App\Command\RollbackMigration;
+use App\Command\RunSeeder;
 
 $application->addCommands([
     new HelloCommand(),
@@ -17,5 +18,6 @@ $application->addCommands([
     new MakeCommandCommand(),
     new taskCommand(),
     new runMigrateCommand(),
-    new RollbackMigration()
+    new RollbackMigration(),
+    new RunSeeder()
 ]);

@@ -35,7 +35,10 @@ Route::post('/store/(\w+)', function($id) {
 }, '', 'AuthMiddleware');
 
 
-Route::get('/get-posts-by-category/(\w+)', 'Home/HomeController@display_category_posts');
+Route::get(
+    '/get-posts-by-category/(\w+)', 
+    'Home/HomeController@display_category_posts'
+);
 
 
 Route::get('/form', 'Form/FormController@index');
