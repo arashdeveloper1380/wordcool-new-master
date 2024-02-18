@@ -12,7 +12,6 @@
     <?php endif; ?>
     <form action="<?php echo e(route('form-store')); ?>" method="post">
         <?php csrf_token(); ?>
-        
         <label for="">نام</label>
         <input type="text" name="name"><br><br>
         <input type="submit" value="ثبت اطلاعات">

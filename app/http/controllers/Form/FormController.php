@@ -13,6 +13,7 @@ class FormController extends Controller{
     }
 
     public function store(){
+        
         if(csrf_check()){
             $validate = [
                 'name'  => 'required|max:50|min:2|string',

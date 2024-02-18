@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Capsule\Manager as DB;
+use Illuminate\Http\Request;
 
 if(!function_exists('dd')){
     function dd($value){
@@ -21,5 +22,11 @@ if(!function_exists('route')){
         }else{
             return home_url() . $url . '/' . $param;
         }
+    }
+}
+
+if(!function_exists('req')){
+    function req(){
+        return Request::capture();
     }
 }
