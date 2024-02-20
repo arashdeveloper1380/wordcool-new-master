@@ -3,16 +3,23 @@
 namespace Database\Seeders;
 
 use App\Models\Test;
-use Core\Seeder\Seeder;
+use Illuminate\Database\Seeder;
 
 class TestSeeder extends Seeder{
 
-    public function __construct(Test $test){
-        $this->model = $test;
-    }
+    public function run(){
+        $users = [
+            [
+                'name' => 'ahbar'
+            ],
+            [
+                'name' => 'kazim',
+            ],
+        ];
 
-    protected $data = [
-        'name' => 'ahbar',
-    ];
+        foreach ($users as $user) {
+            Test::create($user);
+        }
+    }
 
 }

@@ -10,23 +10,18 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class RunSeeder extends Command
 {
-    protected static $defaultName = 'run:seeder';
+    protected static $defaultName = 'db:seed';
 
-    protected function configure()
-    {
+    protected function configure(){
         $this->setDescription('Run Sedder you need ')
-            ->setHelp('This command say hello')
-            ->addArgument('seederName', InputArgument::REQUIRED, 'the name of the command to Seed Data');
+            ->setHelp('This command say hello');
 
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
-    {
-        $class = $input->getArgument('migrationName');
-        $namespace = '\Database\Seeders\\' . $class;
-        if(class_exists($namespace)){
-            $obj = new $namespace();
-            $obj->run();
+    protected function execute(InputInterface $input, OutputInterface $output){
+        $databaseSedder = new DatabaseSeeder();
+        if(is_object($databaseSedder)){
+            $databaseSedder->run();
             $output->writeln([
                 "",
                 "[*]Seed Data Successfully",
