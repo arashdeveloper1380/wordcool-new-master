@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Capsule\Manager as DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 
 if(!function_exists('dd')){
     function dd($value){
@@ -28,5 +29,11 @@ if(!function_exists('route')){
 if(!function_exists('req')){
     function req(){
         return Request::capture();
+    }
+}
+
+if(!function_exists('collection')){
+    function collection(array $array = null){
+        return new Collection($array);
     }
 }

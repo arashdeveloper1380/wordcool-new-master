@@ -640,8 +640,8 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v10.45.0",
-            "version_normalized": "10.45.0.0",
+            "version": "v10.45.1",
+            "version_normalized": "10.45.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -1279,8 +1279,8 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v10.45.0",
-            "version_normalized": "10.45.0.0",
+            "version": "v10.45.1",
+            "version_normalized": "10.45.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",

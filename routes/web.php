@@ -45,4 +45,16 @@ Route::get('/form', 'Form/FormController@index');
 
 Route::post('/form-store', 'Form/FormController@store');
 
+
+Route::get('/collection', function(){
+    $cl = collection([1, 2, 3, 4, 5]);
+
+    
+    $cl_filter = $cl->filter(function($key, $value){
+        return $value > 2;
+    });
+
+    blade('collection', compact('cl', 'cl_filter'));
+});
+
 Route::dispatch();

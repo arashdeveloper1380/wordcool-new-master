@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "302cd78c5eb7a30c565418b2b0f567bf",
+    "content-hash": "a2ce1082297498a032d81cb9ceec9dc5",
     "packages": [
         {
             "name": "bordoni/phpass",
@@ -619,7 +619,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v10.45.0",
+            "version": "v10.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -1225,7 +1225,7 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v10.45.0",
+            "version": "v10.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",

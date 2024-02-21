@@ -1,9 +1,9 @@
 <?php
 
 namespace Core\HtmlGenerator;
-class HtmlGenerator
-{
-    
+
+class HtmlGenerator{
+
     protected $tagName;
     protected $attributes = [];
     protected $children = [];
