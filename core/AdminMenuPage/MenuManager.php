@@ -3,7 +3,6 @@
 namespace Core\AdminMenuPage;
 
 use Core\AdminMenuPage\Contracts\AdminMenuPageInterface;
-use Core\AdminMenuPage\Contracts\MenuPageInterface;
 
 class MenuManager{
     
