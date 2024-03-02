@@ -10,7 +10,7 @@
     <?php if(session()->has('success')): ?>
         <p><?php echo e(session()->get('success')); ?></p>
     <?php endif; ?>
-    <form action="<?php echo e(route('form-store')); ?>" method="post">
+    <form action="<?php echo e(route('form-store-validator')); ?>" method="post">
         <?php csrf_token(); ?>
         <label for="">نام</label>
         <input type="text" name="name"><br><br>

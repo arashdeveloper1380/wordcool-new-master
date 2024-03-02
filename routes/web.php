@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Home\HomeController;
 use Core\Router\Route;
+use Illuminate\Support\Str;
 
 require_once BASE_PATH . '/app/kernel.php';
 
@@ -44,6 +45,8 @@ Route::get(
 Route::get('/form', 'Form/FormController@index');
 
 Route::post('/form-store', 'Form/FormController@store');
+
+Route::post('/form-store-validator', 'Form/FormController@storeValdator');
 
 
 Route::get('/collection', function(){

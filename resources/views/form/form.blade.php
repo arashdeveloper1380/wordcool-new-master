@@ -10,7 +10,7 @@
     @if (session()->has('success'))
         <p>{{ session()->get('success') }}</p>
     @endif
-    <form action="{{ route('form-store') }}" method="post">
+    <form action="{{ route('form-store-validator') }}" method="post">
         <?php csrf_token(); ?>
         <label for="">نام</label>
         <input type="text" name="name"><br><br>
