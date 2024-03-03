@@ -80,6 +80,7 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
             'Psr\\Clock\\' => 10,
+            'PostTypes\\' => 10,
             'PhpParser\\' => 10,
             'PhpOption\\' => 10,
         ),
@@ -247,6 +248,10 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         'Psr\\Clock\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/clock/src',
+        ),
+        'PostTypes\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jjgrainger/posttypes/src',
         ),
         'PhpParser\\' => 
         array (

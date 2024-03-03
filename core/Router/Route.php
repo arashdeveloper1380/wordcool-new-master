@@ -106,7 +106,6 @@ class Route implements RouteInterface{
                 return true;
             }
         }
-
         if (!$found) {
             throw new RouteException('Route Not Found', 404);
         }
