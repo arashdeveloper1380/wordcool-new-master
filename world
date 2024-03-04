@@ -12,7 +12,6 @@ $dotenv->load();
 
 require_once BASE  . '/config/database.php';
 
-
 $application = new Application();
 
 require_once __DIR__ . '/app/command/register.php';

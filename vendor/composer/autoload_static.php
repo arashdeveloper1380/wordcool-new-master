@@ -119,6 +119,7 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
             'Core\\' => 5,
             'Corcel\\Tests\\' => 13,
             'Corcel\\' => 7,
+            'Carbon_Fields\\' => 14,
             'Carbon\\Doctrine\\' => 16,
             'Carbon\\' => 7,
         ),
@@ -347,6 +348,10 @@ class ComposerStaticInit5f0e037ce4ca76b69e86a4d6885e58b0
         'Corcel\\' => 
         array (
             0 => __DIR__ . '/..' . '/jgrossi/corcel/src',
+        ),
+        'Carbon_Fields\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/htmlburger/carbon-fields/core',
         ),
         'Carbon\\Doctrine\\' => 
         array (

@@ -37,3 +37,11 @@ if(!function_exists('collection')){
         return new Collection($array);
     }
 }
+
+if(!function_exists('config')){
+    function config(){
+        return require_once BASE_PATH . '/config/config.php';
+    }
+}
+
+

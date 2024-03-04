@@ -3,7 +3,7 @@
         'name' => 'wordcool/arash-wordcool',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '79d0e42d2ec0e2b7cc6eb8b8c2538fa9f4b44f12',
+        'reference' => 'a55200fa9518dd26073e64a7f4a5c08272602ec9',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -87,6 +87,15 @@
             'replaced' => array(
                 0 => '0.3.*',
             ),
+        ),
+        'htmlburger/carbon-fields' => array(
+            'pretty_version' => 'v3.6.3',
+            'version' => '3.6.3.0',
+            'reference' => 'd913a5148cb9dc61ed239719c747f4ebb513003f',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../htmlburger/carbon-fields',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'illuminate/bus' => array(
             'pretty_version' => 'v10.46.0',
@@ -583,7 +592,7 @@
         'wordcool/arash-wordcool' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '79d0e42d2ec0e2b7cc6eb8b8c2538fa9f4b44f12',
+            'reference' => 'a55200fa9518dd26073e64a7f4a5c08272602ec9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

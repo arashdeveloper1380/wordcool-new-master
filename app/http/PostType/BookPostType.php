@@ -6,7 +6,7 @@ use PostTypes\PostType;
 
 Class BookPostType {
 
-    public function handle(){
+    public function handle() : void{
         $books = new PostType('book');
         $books->register();
     }

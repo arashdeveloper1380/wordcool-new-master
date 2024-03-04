@@ -8,6 +8,7 @@ use Core\PostType\RegisterPostType;
 // register Middlewares
 Route::addMiddleware('AuthMiddleware');
 
+
 // register Shortcodes
 $shortcodeHandler = new \Core\ShortCode\ShortCode();
 $shortcodeHandler->register('SimpleShortcode');

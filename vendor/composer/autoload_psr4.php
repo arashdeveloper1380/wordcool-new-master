@@ -59,6 +59,7 @@ return array(
     'Core\\' => array($baseDir . '/core'),
     'Corcel\\Tests\\' => array($vendorDir . '/jgrossi/corcel/tests'),
     'Corcel\\' => array($vendorDir . '/jgrossi/corcel/src'),
+    'Carbon_Fields\\' => array($vendorDir . '/htmlburger/carbon-fields/core'),
     'Carbon\\Doctrine\\' => array($vendorDir . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
