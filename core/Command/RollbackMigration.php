@@ -1,21 +1,21 @@
 <?php
 
-namespace App\Command;
+namespace Core\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class runMigrateCommand extends Command
+class RollbackMigration extends Command
 {
-    protected static $defaultName = 'migration:run';
+    protected static $defaultName = 'migration:rollback';
 
     protected function configure()
     {
-        $this->setDescription('Run Migration File')
-            ->setHelp('This command Run Migration File')
-            ->addArgument('migrationName', InputArgument::REQUIRED, 'the name of the command to run');
+        $this->setDescription('rollback migrate file')
+            ->setHelp('This command rollback migrate file')
+            ->addArgument('migrationName', InputArgument::REQUIRED, 'the name of the command to rollback');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -28,21 +28,20 @@ class runMigrateCommand extends Command
             $table_class = "Create{$table_class}Table";
             include $table_name_exist;
 
-            (new $table_class())->up();
+            (new $table_class())->down();
 
             $output->writeln([
                 "",
-                "[*] ".$migrationName. " Migrated Successfully",
+                "[*] ".$migrationName. " Migration rollback Successfully",
                 '',
             ]);
-        }else {
+        }else{
             $output->writeln([
                 "",
                 "[!] Migration file for {$migrationName} does not exist.",
                 '',
             ]);
         }
-
         return Command::SUCCESS;
     }
 }

@@ -12,18 +12,17 @@ add_action(
 function wordcoolThemeOption(){
 
     Container::make('theme_options', __('صفحه تنظیمات'))
-        ->add_fields( array(
+        ->add_fields([
             Field::make( 'text', 'crb_text', 'شعار سایت' ),
-        ));
+        ]);
         
 }
 
+if(config()['theme_option'] === true){
 
-if(config()['theme_option'] == true){
+    add_action('after_setup_theme', 'wordcoolThemeOptionLoad');
 
-    add_action('after_setup_theme', 'crb_load');
-
-    function crb_load(){
+    function wordcoolThemeOptionLoad(){
         Carbon_Fields::boot();
     }
 }

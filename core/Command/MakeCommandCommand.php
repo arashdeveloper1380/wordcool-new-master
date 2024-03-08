@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command;
+namespace Core\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -23,7 +23,7 @@ class MakeCommandCommand extends Command
     {
         $commandName = $input->getArgument('commandname');
 
-        $filePath = __DIR__ . '/' . $commandName . '.php';
+        $filePath = realpath(__DIR__ . '../../../') . '/app/command/' . $commandName . '.php';
         $stubPath = __DIR__ . '/stubs/Command.stub';
         $fileContent = file_get_contents($stubPath);
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command;
+namespace Core\Command;
 
 use Database\Seeders\DatabaseSeeder;
 use Symfony\Component\Console\Command\Command;
