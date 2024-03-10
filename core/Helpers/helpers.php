@@ -40,8 +40,6 @@ if(!function_exists('collection')){
 
 if(!function_exists('config')){
     function config(){
-        return require_once BASE_PATH . '/config/config.php';
+        return require BASE_PATH . '/config/config.php';
     }
 }
-
-

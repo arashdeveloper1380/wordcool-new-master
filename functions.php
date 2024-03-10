@@ -10,4 +10,4 @@ add_action('init', function() {
 });
 
 
-require_once BASE_PATH . '/app/utilities/ThemeOption.php';
+require_once BASE_PATH . '/app/utilities/register.php';

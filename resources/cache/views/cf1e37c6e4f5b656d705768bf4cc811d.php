@@ -13,6 +13,9 @@
 
     <?php echo e(do_shortcode("[simple_shortcode name='arash' lname='narimani']")); ?>
 
+
+    <?php echo e(get_option('_text_arash')); ?>
+
     
     
 </body>

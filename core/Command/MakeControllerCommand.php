@@ -25,16 +25,13 @@ class MakeControllerCommand extends Command
         $controllerName = $input->getArgument('controllername');
         $path = $input->getArgument('path');
 
-        $filePath = __DIR__ . '/../http/controllers/' . $path . '/' . $controllerName . '.php';
+        $filePath = realpath(__DIR__ . '../../../') 
+            . '/app/http/controllers/' . $path . '/' . $controllerName . '.php';
+
         $stubPath = __DIR__ . '/stubs/Controller.stub';
         $fileContent = file_get_contents($stubPath);
 
         $fileContent = str_replace('{{className}}', $controllerName, $fileContent);
-
-        // if(!empty($path)){
-        //     $fileContent = str_replace('{{dir}}', $path, $fileContent);
-        // }
-        
         
         file_put_contents($filePath, $fileContent);
 

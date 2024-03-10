@@ -23,7 +23,7 @@ class MakeModelCommand extends Command
     {
         $modelName = $input->getArgument('modelname');
 
-        $filePath = __DIR__ . '/../models/'. $modelName . '.php';
+        $filePath = realpath(__DIR__ . '../../../')  . '/app/models/'. $modelName . '.php';
         $stubPath = __DIR__ . '/stubs/Model.stub';
         $fileContent = file_get_contents($stubPath);
 

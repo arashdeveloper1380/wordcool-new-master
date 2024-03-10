@@ -1,28 +1,22 @@
 <?php
 
-use Carbon_Fields\Carbon_Fields;
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-add_action(
-    'carbon_fields_register_fields',
-    'wordcoolThemeOption'
-);
-
-function wordcoolThemeOption(){
-
-    Container::make('theme_options', __('صفحه تنظیمات'))
-        ->add_fields([
-            Field::make( 'text', 'crb_text', 'شعار سایت' ),
-        ]);
-        
-}
-
 if(config()['theme_option'] === true){
 
-    add_action('after_setup_theme', 'wordcoolThemeOptionLoad');
-
-    function wordcoolThemeOptionLoad(){
-        Carbon_Fields::boot();
+    add_action(
+        'carbon_fields_register_fields',
+        'wordcoolThemeOption'
+    );
+    
+    function wordcoolThemeOption(){
+    
+        Container::make('theme_options', __('صفحه تنظیمات'))
+            ->add_fields([
+                Field::make( 'text', 'text_arash', 'شعار سایت' ),
+            ]);
+            
     }
+
 }

@@ -13,9 +13,12 @@
     {{ 
         do_shortcode("[simple_shortcode name='arash' lname='narimani']") 
     }}
+
+    {{ get_option('_text_arash') }}
     
     {{-- @foreach ($posts as $item)
         <h1>{{ $item->post_title }}</h1>
     @endforeach --}}
+    
 </body>
 </html>
