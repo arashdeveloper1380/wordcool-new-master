@@ -1,15 +1,17 @@
 <?php
 
 use App\Http\Controllers\Home\HomeController;
+
 use Core\Router\Route;
 use Illuminate\Support\Str;
 
 require_once BASE_PATH . '/app/kernel.php';
+require_once BASE_PATH . '/routes/api.php';
 
 
-// params => ([\w-]+) support a-z A-Z 0-9 -_
-// params => (\w+) support a-z A-Z 0-9 _
-// Query String => \?id=.*
+// params       =>      ([\w-]+) support a-z A-Z 0-9 -_
+// params       =>      (\w+) support a-z A-Z 0-9 _
+// Query String =>      \?id=.*
 
 // Route::get('/users/search', function($params) {
 //     echo $params['name'];

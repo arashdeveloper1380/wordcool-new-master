@@ -2,6 +2,7 @@
 
 // Register Commands
 
+use App\Command\BackupCommand;
 use App\Command\HelloCommand;
 use Core\Command\MakeCommandCommand;
 use Core\Command\MakeControllerCommand;
@@ -19,5 +20,5 @@ $application->addCommands([
     new taskCommand(),
     new runMigrateCommand(),
     new RollbackMigration(),
-    new RunSeeder()
+    new RunSeeder(),
 ]);

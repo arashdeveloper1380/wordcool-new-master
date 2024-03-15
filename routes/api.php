@@ -1,11 +1,6 @@
 <?php
 
-use App\Http\Controllers\Home\HomeController;
-use Core\Router\RouteApi;
+use Core\Router\Route;
 
-RouteApi::get(
-    '/api/users', 
-    'Home/HomeController@api', 
-);
-
-RouteApi::dispatch();
+Route::get('/api/get-test/(\w+)', 'Home/TestController@find');
+Route::post('/api/create-test', 'Home/TestController@store');

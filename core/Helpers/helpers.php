@@ -43,3 +43,20 @@ if(!function_exists('config')){
         return require BASE_PATH . '/config/config.php';
     }
 }
+
+if(!function_exists('public_path')){
+    function public_path(string $path) : string{
+        return realpath(__DIR__ . '/../../') . '/public/' . $path;
+    }
+}
+
+if (!function_exists('resJson')) { 
+    function resJson($data, $status_code = 200, $headers = []) {
+        http_response_code($status_code);
+        foreach ($headers as $key => $value) {
+            header("$key: $value"); 
+        } 
+        header("Content-Type: application/json"); 
+        echo json_encode($data); exit(); 
+    } 
+}

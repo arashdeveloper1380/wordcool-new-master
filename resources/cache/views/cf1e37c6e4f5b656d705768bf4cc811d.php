@@ -18,5 +18,6 @@
 
     
     
+    
 </body>
 </html><?php /**PATH C:\xampp\htdocs\wordcool\wp-content\plugins\wordcool-new-master\resources\views/index.blade.php ENDPATH**/ ?>
